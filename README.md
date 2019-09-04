@@ -10,6 +10,7 @@
 * [Docker Images](#docker-images)
     * [`-dev`](#-dev)
     * [`-dev-macos`](#-dev-macos)
+    * [`-coreos`](#-coreos)
     * [`-debug`](#-debug)
 * [Environment Variables](#environment-variables)
     * [PHP and PHP-FPM configuration](#php-and-php-fpm-configuration)
@@ -54,6 +55,10 @@ Supported tags and respective `Dockerfile` links:
 * `7.2-dev-macos` [_(7/Dockerfile)_]
 * `7.1-dev-macos` [_(7/Dockerfile)_]
 * `5.6-dev-macos`, `5-dev-macos` [_(5.6/Dockerfile)_]
+* `7.3-coreos`, `7-coreos`, `coreos` [_(7/Dockerfile)_]
+* `7.2-coreos` [_(7/Dockerfile)_]
+* `7.1-coreos` [_(7/Dockerfile)_]
+* `5.6-coreos`, `5-coreos` [_(5.6/Dockerfile)_]
 
 ### `-dev`
 
@@ -63,9 +68,13 @@ Images with `-dev` tag have a few differences:
 * PHP source code available under `/usr/src/php.tar.xz`
 * `PHP_FPM_CLEAR_ENV` is set to `no` by default
 
-### `-dev-macos` 
+### `-dev-macos`
 
 Same as `-dev` but the default user/group `wodby` has uid/gid `501`/`20`  to match the macOS default user/group ids.
+
+### `-coreos`
+
+Same as the regular image but the default user/group `wodby` has uid/gid `500`/`500` to match the CoreOS default user/group ids.
 
 ### `-debug`
 
